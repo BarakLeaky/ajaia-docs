@@ -1,0 +1,41 @@
+{
+  "name": "ajaia-docs",
+  "version": "0.1.0",
+  "private": true,
+  "engines": { "node": ">=20.6" },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "db:push": "drizzle-kit push",
+    "db:seed": "tsx --env-file=.env.local src/db/seed.ts",
+    "setup": "npm run db:push && npm run db:seed"
+  },
+  "dependencies": {
+    "@tiptap/core": "^3.0.0",
+    "@tiptap/pm": "^3.0.0",
+    "@tiptap/react": "^3.0.0",
+    "@tiptap/starter-kit": "^3.0.0",
+    "drizzle-orm": "^0.44.0",
+    "mammoth": "^1.9.0",
+    "marked": "^15.0.0",
+    "next": "^15.1.6",
+    "postgres": "^3.4.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanitize-html": "^2.14.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/sanitize-html": "^2.13.0",
+    "dotenv": "^16.4.7",
+    "drizzle-kit": "^0.31.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
